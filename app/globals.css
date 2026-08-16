@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  /* ---- Design tokens: Seventeen Coffee ---- */
+  --bg: #f7f5f1;         /* کرم سرد، نه کرم کلیشه‌ای گرم */
+  --panel: #ffffff;
+  --ink: #171717;        /* مشکی گرم — عمداً شبیه «17» */
+  --ink-soft: #55524c;
+  --line: #e6e2d8;
+  --gold: #b08d57;       /* طلایی مات، لهجه‌ی برند */
+  --gold-soft: #ded0b5;
+  --radius: 2px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif;
+  font-feature-settings: "ss01";
+  line-height: 1.7;
+}
+
+.mono {
+  font-family: "IBM Plex Mono", monospace;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+::selection { background: var(--gold-soft); }
+
+/* ---- Layout helpers ---- */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hairline {
+  border: none;
+  border-top: 1px solid var(--line);
+}
+
+/* focus visibility */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
